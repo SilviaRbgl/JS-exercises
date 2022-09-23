@@ -113,6 +113,7 @@ function lowNumb(numbers) {
     console.log("lowestnumber", lowestNumber)
 }
 lowNumb(randomNumbers);
+console.log("delete this")
 
 
 // Exercise 9
