@@ -178,6 +178,7 @@ console.log("exercise15 >>>", words.join(" "));
 
 // Exercise 19
 
+
 // Exercise 20
 
 // Exercise 21
