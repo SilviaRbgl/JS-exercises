@@ -88,19 +88,28 @@ for (let c = 0; c < ageStudents.length; c++) {
 }
 
 // Exercise 8
-// let arrayLowNumber = [23, 45, 2, 85, 33, 12];
+let min = ageStudents[0];
 
-// function lowNumber(array) {  
-//     for (let i = 0; i < arrayLowNumber.length; i++) {
-//         if (arrayLowNumber[i] < arrayLowNumber) {
-//         }
-//     }
-// console.log("exercise 8 >>>", arrayLowNumber[i]); 
-// }
-// lowNumber(arrayLowNumber[i]);
-
+function lowNumber(minAge) {
+    for (let i = 0; i < minAge.length; i++) {
+        if (minAge[i] < min)
+            min = minAge[i];
+    }
+    console.log("exercise 8 >>>", min); 
+}
+lowNumber(ageStudents);
 
 // Exercise 9
+let max = ageStudents[0];
+
+function bigNumber(maxAge) {
+    for (let i = 0; i < ageStudents.length; i++) {
+        if (ageStudents[i] > max)
+            max = ageStudents[i];
+    }
+    console.log("exercise 9 >>>", max);
+}
+bigNumber(ageStudents);
 
 // Exercise 10
 let arrayOne = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100];
@@ -116,9 +125,19 @@ positionNumber(arrayOne[1]);
 
 // Exercise 11
 let arrayTwo = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100];
+let duplicateArrayTwo = new Set(arrayTwo);
 
+const duplicates = arrayTwo.filter(item => {
+    if (duplicateArrayTwo.has(item)) {
+        duplicateArrayTwo.delete(item);
+    } else {
+        return item;
+    }
+});
 
-// Exercise 12 -> I dont see the comas, is thas allright?
+console.log("exercise 11 >>>", duplicates);
+
+// Exercise 12
 let myColor = ["Red", "Green", "White", "Black"];
 let allColors = [];
 let separator = " , ";
@@ -127,8 +146,7 @@ for (let i = 0; i < myColor.length; i++) {
     allColors += myColor[i];
     if (i < myColor.length - 1) allColors += separator;
 }
-
-console.log("exercise12 >>>", allColors);
+console.log("exercise12 >>>",  allColors);
 
 //#endregion
 
@@ -153,14 +171,19 @@ let mySentence = "prince of persia";
 let words = mySentence.split(" ");
 
 for (let i = 0; i < words.length; i++) {
-    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
 }
 
-words.join(" ");
 console.log("exercise15 >>>", words.join(" "));
 
 // Exercise 16
+let longWord = "Web Development Tutorial";
 
+function longest(str) {
+    str = str.split(" ")
+    return str.sort((a, b) => b.length - a.length)[0]
+}
+console.log("exercise16 >>>", longest(longWord));
 
 //#endregion
 
@@ -178,14 +201,18 @@ console.log("exercise15 >>>", words.join(" "));
 
 // Exercise 19
 
-
 // Exercise 20
+
 
 // Exercise 21
 
 // Exercise 22
 
 // Exercise 23
+let wordOne = "JavaScript"
+let result_wordOne = wordOne.replaceAll("a", "1")
+
+console.log("exercise23 >>>", result_wordOne);
 
 // Exercise 24
 
