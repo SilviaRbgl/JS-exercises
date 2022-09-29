@@ -41,6 +41,7 @@ if (myAge > juliaAge) {
 
 // Exercise 6
 let myClass = ["Heron", "Dickson", "Viktor", "Sebastian", "Jacopo", "Raul", "Silvia"]
+    // .sort() = this method sort the array
     myClass.sort();
     console.log("exercise 6a >>>", myClass);
     console.log("exercise 6b >>>",  myClass[0]);
@@ -123,7 +124,7 @@ function positionNumber(params) {
 }
 positionNumber(arrayOne[1]);
 
-// Exercise 11
+// Exercise 11 = IDK how I did it.
 let arrayTwo = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100];
 let duplicateArrayTwo = new Set(arrayTwo);
 
@@ -137,7 +138,7 @@ const duplicates = arrayTwo.filter(item => {
 
 console.log("exercise 11 >>>", duplicates);
 
-// Exercise 12
+// Exercise 12 = (with join method it will be easier)
 let myColor = ["Red", "Green", "White", "Black"];
 let allColors = [];
 let separator = " , ";
@@ -153,30 +154,30 @@ console.log("exercise12 >>>",  allColors);
 
 //#region 4) JavaScript String
 
-//Exercise 13
+//Exercise 13 = what is this blue-Number? How does it works?
 function reverseNumber(n) {
     n = n + "";
     return n.split("").reverse().join("");
 }
-console.log("exercise13 >>>", Number(reverseNumber(32443)));
+// console.log("exercise13 >>>", Number(reverseNumber(32443)));
+console.log("exercise13 >>>", reverseNumber("32443"));
 
 //Exercise 14
 function alphabetOrder(abc) {
     return abc.split("").sort().join("");
 }
-console.log("exercise14 >>>", alphabetOrder("silvia"));
+console.log("exercise14 >>>", alphabetOrder("webmaster"));
 
-// Exercise 15
+// Exercise 15 
 let mySentence = "prince of persia";
 let words = mySentence.split(" ");
 
 for (let i = 0; i < words.length; i++) {
     words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
 }
-
 console.log("exercise15 >>>", words.join(" "));
 
-// Exercise 16
+// Exercise 16 **** diferent
 let longWord = "Web Development Tutorial";
 
 function longest(str) {
@@ -191,22 +192,41 @@ console.log("exercise16 >>>", longest(longWord));
 //#region 5) DOM manipulation exercises
 
 //Exercise 17
+const bands = ["Muse", "Abba", "Extremoduro"];
+const myList = document.getElementById("band-list");
+
+for (let i = 0; i < bands.length; i++) {
+    const liTag = document.querySelector("li");
+    liTag.innerHTML = bands[i];
+    myList.appendChild(liTag);
+}
+console.log("exercise17 >>>", myList);
+
 
 //Exercise 18
+
 
 //#endregion
 
 
 //#region 6) Extra exercises
 
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 // Exercise 19
+// function addOne() {
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] === numbers[1] + numbers[2]);
+//     }
+// }
+// addOne(numbers[i]);
+// console.log("exercise19 >>>", numbers[i]);
 
 // Exercise 20
 
-
 // Exercise 21
 
-// Exercise 22
+// Exercise 22 = play with conditions
 
 // Exercise 23
 let wordOne = "JavaScript"
@@ -215,6 +235,26 @@ let result_wordOne = wordOne.replaceAll("a", "1")
 console.log("exercise23 >>>", result_wordOne);
 
 // Exercise 24
+let sum = 0;
+    
+function addition() {   
+    for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+    }
+}
+addition(sum);
+console.log("exercise24a >>>", sum);
+
+let minNumbers = numbers[0];
+
+function minNumber(minNumb) {
+    for (let i = 0; i < minNumb.length; i++) {
+        if (minNumb[i] < minNumbers)
+            minNumbers = minNumb[i];
+    }
+}
+minNumber(numbers);
+console.log("exercise 24b >>>", minNumbers);
 
 // Exercise 25
 
